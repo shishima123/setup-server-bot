@@ -20,7 +20,7 @@ sudo $PKG -y update
 # ===== 2. Install basic packages =====
 echo "📦 Installing base packages..."
 # - Amazon Linux thường dùng group "Development Tools" thay vì build-essential
-sudo $PKG -y install curl wget ca-certificates gnupg2 git
+sudo $PKG -y install wget ca-certificates git
 
 # Dev tools (gcc, make, etc.)
 if [ "$PKG" = "dnf" ]; then
