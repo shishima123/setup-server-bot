@@ -19,7 +19,7 @@ sudo $PKG -y update
 
 # ===== 2. Install basic packages =====
 echo "📦 Installing base packages..."
-sudo $PKG -y git
+sudo $PKG -y install git
 
 echo "📥 Git version:"
 git --version || true
