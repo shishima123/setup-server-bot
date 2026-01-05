@@ -17,18 +17,6 @@ echo "🔎 Package manager: $PKG"
 echo "🔄 Updating system..."
 sudo $PKG -y update
 
-# ===== 2. Install basic packages =====
-echo "📦 Installing base packages..."
-# - Amazon Linux thường dùng group "Development Tools" thay vì build-essential
-sudo $PKG -y install wget ca-certificates git
-
-# Dev tools (gcc, make, etc.)
-if [ "$PKG" = "dnf" ]; then
-  sudo dnf -y groupinstall "Development Tools" || true
-else
-  sudo yum -y groupinstall "Development Tools" || true
-fi
-
 echo "📥 Git version:"
 git --version || true
 
