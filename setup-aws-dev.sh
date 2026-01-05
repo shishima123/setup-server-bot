@@ -17,6 +17,10 @@ echo "🔎 Package manager: $PKG"
 echo "🔄 Updating system..."
 sudo $PKG -y update
 
+# ===== 2. Install basic packages =====
+echo "📦 Installing base packages..."
+sudo $PKG -y git
+
 echo "📥 Git version:"
 git --version || true
 
